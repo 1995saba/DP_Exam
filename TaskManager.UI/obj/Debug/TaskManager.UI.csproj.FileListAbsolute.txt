@@ -8,3 +8,10 @@ c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.csproj.CoreCompileInputs.cache
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.exe
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.pdb
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.BLL.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.DAL.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\EntityFramework.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.BLL.pdb
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.DAL.pdb
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.DAL.dll.config
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\EntityFramework.xml

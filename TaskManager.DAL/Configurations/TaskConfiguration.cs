@@ -18,10 +18,7 @@ namespace TaskManager.DAL.Configurations
                     .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(p => p.Name)
-                    .HasMaxLength(100).IsRequired();
-
-            Property(p => p.Description)
-                    .HasMaxLength(1000).IsOptional();
+                    .HasMaxLength(500).IsRequired();
 
             Property(p => p.DateOfCreating)
                     .IsRequired();

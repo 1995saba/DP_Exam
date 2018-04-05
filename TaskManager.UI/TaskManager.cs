@@ -16,14 +16,20 @@ namespace TaskManager.UI
     {
 
         private TaskFinder taskFinder;
+        private TaskSaver taskSaver;
+        private DAL.Task currentTask;
         public TaskManager()
         {
             InitializeComponent();
             taskFinder = new TaskFinder();
-            foreach(var tag in taskFinder.Repository.Tags)
+            if (taskFinder.Repository.Tags != null)
             {
-                tagsListBox.Items.Add(tag.Name);
+                foreach (var tag in taskFinder.Repository.Tags)
+                {
+                    tagsListBox.Items.Add(tag.Name);
+                }
             }
+            taskSaver = new TaskSaver();
             taskListView.Columns.Add("Id");
             taskListView.Columns.Add("Name");
             taskListView.Columns.Add("CreationDate");
@@ -33,12 +39,34 @@ namespace TaskManager.UI
 
         private void SaveToFileButton_Click(object sender, EventArgs e)
         {
-
+            if (taskFinder.Tasks != null)
+            {
+                taskSaver.Tasks = taskFinder.Tasks;
+                saveFileDialog.ShowDialog();
+                string path = saveFileDialog.FileName;
+                taskSaver.SaveToFile(path);
+            }
         }
 
         private void AddTaskButton_Click(object sender, EventArgs e)
         {
-
+            if (nameTextBox.Text != null)
+            {
+                DAL.Task newTask = new DAL.Task
+                {
+                    Name = nameTextBox.Text,
+                    DateOfCreating = DateTime.Now,
+                    DeadLine=deadlinePicker.Value,
+                    Priority=(int)priorityNum.Value
+                };
+                foreach (var item in tagsListBox.SelectedItems)
+                {
+                   newTask.Tags.Add(
+                       taskFinder.Repository.Tags.Find(
+                           p => p.Name == item.ToString()));
+                }
+                taskFinder.Repository.Create(newTask);
+            }
         }
 
         private void AddTagButton_Click(object sender, EventArgs e)
@@ -68,19 +96,128 @@ namespace TaskManager.UI
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-
+            if (paramTextBox.Text != null)
+            {
+                if (nameRadioButton.Checked)
+                {
+                    taskListView.Clear();
+                    taskFinder.FindByName(paramTextBox.Text);
+                    if (taskFinder.Tasks != null)
+                    {
+                        foreach (var task in taskFinder.Tasks)
+                        {
+                            ListViewItem taskItem = new ListViewItem();
+                            taskItem.SubItems.Add(task.Id.ToString());
+                            taskItem.SubItems.Add(task.Name);
+                            taskItem.SubItems.Add(task.DateOfCreating.ToString());
+                            taskItem.SubItems.Add(task.DeadLine.ToString());
+                            taskItem.SubItems.Add(task.Priority.ToString());
+                            taskListView.Items.Add(taskItem);
+                        }
+                        taskListView.Refresh();
+                    }
+                }
+                if (creationDateRadioButton.Checked)
+                {
+                    taskListView.Clear();
+                    DateTime date;
+                    bool result = DateTime.TryParse(paramTextBox.Text, out date);
+                    if (result)
+                    {
+                        taskFinder.FindByCreationDate(date);
+                        if (taskFinder.Tasks != null)
+                        {
+                            foreach (var task in taskFinder.Tasks)
+                            {
+                                ListViewItem taskItem = new ListViewItem();
+                                taskItem.SubItems.Add(task.Id.ToString());
+                                taskItem.SubItems.Add(task.Name);
+                                taskItem.SubItems.Add(task.DateOfCreating.ToString());
+                                taskItem.SubItems.Add(task.DeadLine.ToString());
+                                taskItem.SubItems.Add(task.Priority.ToString());
+                                taskListView.Items.Add(taskItem);
+                            }
+                            taskListView.Refresh();
+                        }
+                    }
+                }
+                if (deadlineRadioButton.Checked)
+                {
+                    taskListView.Clear();
+                    DateTime date;
+                    bool result = DateTime.TryParse(paramTextBox.Text, out date);
+                    if (result)
+                    {
+                        taskFinder.FindByDeadline(date);
+                        if (taskFinder.Tasks != null)
+                        {
+                            foreach (var task in taskFinder.Tasks)
+                            {
+                                ListViewItem taskItem = new ListViewItem();
+                                taskItem.SubItems.Add(task.Id.ToString());
+                                taskItem.SubItems.Add(task.Name);
+                                taskItem.SubItems.Add(task.DateOfCreating.ToString());
+                                taskItem.SubItems.Add(task.DeadLine.ToString());
+                                taskItem.SubItems.Add(task.Priority.ToString());
+                                taskListView.Items.Add(taskItem);
+                            }
+                            taskListView.Refresh();
+                        }
+                    }
+                }
+                if (priorityRadioButton.Checked)
+                {
+                    taskListView.Clear();
+                    int priority;
+                    bool result = Int32.TryParse(paramTextBox.Text, out priority);
+                    if (result)
+                    {
+                        taskFinder.FindByPriority(priority);
+                        if (taskFinder.Tasks != null)
+                        {
+                            foreach (var task in taskFinder.Tasks)
+                            {
+                                ListViewItem taskItem = new ListViewItem();
+                                taskItem.SubItems.Add(task.Id.ToString());
+                                taskItem.SubItems.Add(task.Name);
+                                taskItem.SubItems.Add(task.DateOfCreating.ToString());
+                                taskItem.SubItems.Add(task.DeadLine.ToString());
+                                taskItem.SubItems.Add(task.Priority.ToString());
+                                taskListView.Items.Add(taskItem);
+                            }
+                            taskListView.Refresh();
+                        }
+                    }
+                }
+                if (tagRadioButton.Checked)
+                {
+                    taskListView.Clear();
+                    if (paramTextBox.Text!=null)
+                    {
+                        taskFinder.FindByTag(
+                            taskFinder.Repository.Tags.Find(p=>p.Name==paramTextBox.Text));
+                        if (taskFinder.Tasks != null)
+                        {
+                            foreach (var task in taskFinder.Tasks)
+                            {
+                                ListViewItem taskItem = new ListViewItem();
+                                taskItem.SubItems.Add(task.Id.ToString());
+                                taskItem.SubItems.Add(task.Name);
+                                taskItem.SubItems.Add(task.DateOfCreating.ToString());
+                                taskItem.SubItems.Add(task.DeadLine.ToString());
+                                taskItem.SubItems.Add(task.Priority.ToString());
+                                taskListView.Items.Add(taskItem);
+                            }
+                            taskListView.Refresh();
+                        }
+                    }
+                }
+            }
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void TaskListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //currentDescriptionTextBox.Text=
-            //    taskFinder.Repository
-            //    .Tasks.First(p=>p.Id==taskListView.SelectedItems)
         }
     }
 }

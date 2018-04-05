@@ -21,7 +21,7 @@ namespace TaskManager.DAL
             base.OnModelCreating(modelBuilder);
         }
 
-        public ApplicationDbContext() : base("name=ConnectionString")
+        public ApplicationDbContext() : base("ConnectionString")
         {
 
         }

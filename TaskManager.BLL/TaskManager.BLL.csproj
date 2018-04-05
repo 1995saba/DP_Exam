@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ISaver.cs" />
-    <Compile Include="Saver.cs" />
+    <Compile Include="TaskSaver.cs" />
     <Compile Include="TaskFinder.cs" />
     <Compile Include="ITaskFinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

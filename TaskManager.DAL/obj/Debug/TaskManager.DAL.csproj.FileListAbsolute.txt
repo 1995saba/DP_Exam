@@ -1,0 +1,11 @@
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\bin\Debug\TaskManager.DAL.dll.config
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\bin\Debug\TaskManager.DAL.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\bin\Debug\TaskManager.DAL.pdb
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\bin\Debug\EntityFramework.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\bin\Debug\EntityFramework.xml
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\obj\Debug\TaskManager.DAL.csprojResolveAssemblyReference.cache
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\obj\Debug\TaskManager.DAL.csproj.CoreCompileInputs.cache
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\obj\Debug\TaskManager.DAL.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\obj\Debug\TaskManager.DAL.pdb

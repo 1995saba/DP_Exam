@@ -9,6 +9,7 @@ namespace TaskManager.BLL
 {
     public interface ITaskFinder
     {
+        DAL.Task FindById(int id);
         void FindByName(string name);
         void FindByDeadline(DateTime deadline);
         void FindByTag(Tag tag);

@@ -1,0 +1,11 @@
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\bin\Debug\TaskManager.BLL.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\bin\Debug\TaskManager.BLL.pdb
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\bin\Debug\TaskManager.DAL.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\bin\Debug\EntityFramework.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\bin\Debug\TaskManager.DAL.pdb
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\bin\Debug\TaskManager.DAL.dll.config
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\bin\Debug\EntityFramework.xml
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\obj\Debug\TaskManager.BLL.csprojResolveAssemblyReference.cache
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\obj\Debug\TaskManager.BLL.csproj.CoreCompileInputs.cache
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\obj\Debug\TaskManager.BLL.dll
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.BLL\obj\Debug\TaskManager.BLL.pdb

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TaskManager.DAL.Configurations
 {
-    public class TagConfiguration: EntityTypeConfiguration<Task>
+    public class TagConfiguration: EntityTypeConfiguration<Tag>
     {
         public TagConfiguration()
         {

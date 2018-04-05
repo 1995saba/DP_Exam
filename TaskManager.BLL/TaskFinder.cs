@@ -10,11 +10,17 @@ namespace TaskManager.BLL
     public class TaskFinder : ITaskFinder
     {
         public List<DAL.Task> Tasks { get; set; }
+        public DAL.Task Task { get; set; }
         public Repository Repository { get; set; }
 
         public TaskFinder()
         {
             Repository = new Repository();
+        }
+
+        public DAL.Task FindById(int id)
+        {
+            return Repository.Tasks.First(p => p.Id==id);
         }
 
         public void FindByName(string name)

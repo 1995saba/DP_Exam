@@ -15,8 +15,8 @@ namespace TaskManager.DAL
         public Repository()
         {
             dbContext = new ApplicationDbContext();
-            Tasks = dbContext.Tasks.ToList();
-            Tags = dbContext.Tags.ToList();
+            Tasks = new List<Task>();
+            Tags = new List<Tag>();
         }
 
         public void Create(Task item)
@@ -44,6 +44,26 @@ namespace TaskManager.DAL
         {
             dbContext.Tags.Remove(item);
             Tags.Remove(item);
+            dbContext.SaveChanges();
+        }
+
+        public void Update(Task item)
+        {
+            Task oldItem=dbContext.Tasks.First(p=>p.Id==item.Id);
+            dbContext.Tasks.Remove(oldItem);
+            dbContext.Tasks.Add(item);
+            Tasks.Remove(oldItem);
+            Tasks.Add(item);
+            dbContext.SaveChanges();
+        }
+
+        public void Update(Tag item)
+        {
+            Tag oldItem = dbContext.Tags.First(p => p.Id == item.Id);
+            dbContext.Tags.Remove(oldItem);
+            dbContext.Tags.Add(item);
+            Tags.Remove(oldItem);
+            Tags.Add(item);
             dbContext.SaveChanges();
         }
     }
