@@ -1,0 +1,10 @@
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.UI.exe.config
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.UI.exe
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.UI.pdb
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.csprojResolveAssemblyReference.cache
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.Properties.Resources.resources
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.TaskManager.resources
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.csproj.GenerateResource.Cache
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.csproj.CoreCompileInputs.cache
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.exe
+c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\obj\Debug\TaskManager.UI.pdb
