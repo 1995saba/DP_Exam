@@ -15,3 +15,23 @@ c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.DAL.pdb
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\TaskManager.DAL.dll.config
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.UI\bin\Debug\EntityFramework.xml
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.UI.exe.config
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.UI.exe
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.UI.pdb
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.BLL.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.DAL.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\EntityFramework.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.BLL.pdb
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.DAL.pdb
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.DAL.dll.config
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\EntityFramework.xml
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\obj\Debug\TaskManager.UI.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\obj\Debug\TaskManager.UI.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\obj\Debug\TaskManager.UI.TaskManager.resources
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\obj\Debug\TaskManager.UI.csproj.GenerateResource.Cache
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\obj\Debug\TaskManager.UI.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\obj\Debug\TaskManager.UI.exe
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\obj\Debug\TaskManager.UI.pdb
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\TaskManager.BLL.dll.config
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.UI\bin\Debug\EntityFramework.SqlServer.xml

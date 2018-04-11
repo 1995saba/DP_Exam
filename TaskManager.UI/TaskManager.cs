@@ -17,7 +17,6 @@ namespace TaskManager.UI
 
         private TaskFinder taskFinder;
         private TaskSaver taskSaver;
-        private DAL.Task currentTask;
         public TaskManager()
         {
             InitializeComponent();
@@ -42,6 +41,13 @@ namespace TaskManager.UI
             if (taskFinder.Tasks != null)
             {
                 taskSaver.Tasks = taskFinder.Tasks;
+                saveFileDialog.ShowDialog();
+                string path = saveFileDialog.FileName;
+                taskSaver.SaveToFile(path);
+            }
+            else
+            {
+                taskSaver.Tasks = taskFinder.Repository.Tasks;
                 saveFileDialog.ShowDialog();
                 string path = saveFileDialog.FileName;
                 taskSaver.SaveToFile(path);
@@ -82,16 +88,16 @@ namespace TaskManager.UI
 
         private void ShowAllButton_Click(object sender, EventArgs e)
         {
-            foreach(var task in taskFinder.Repository.Tasks)
+            taskListView.Items.Clear();
+            foreach (var task in taskFinder.Repository.Tasks)
             {
-                ListViewItem taskItem = new ListViewItem();
-                taskItem.SubItems.Add(task.Id.ToString());
+                ListViewItem taskItem = taskListView.Items.Add(task.Id.ToString());
                 taskItem.SubItems.Add(task.Name);
                 taskItem.SubItems.Add(task.DateOfCreating.ToString());
                 taskItem.SubItems.Add(task.DeadLine.ToString());
                 taskItem.SubItems.Add(task.Priority.ToString());
-                taskListView.Items.Add(taskItem);
             }
+            taskListView.Refresh();
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
@@ -100,26 +106,24 @@ namespace TaskManager.UI
             {
                 if (nameRadioButton.Checked)
                 {
-                    taskListView.Clear();
+                    taskListView.Items.Clear();
                     taskFinder.FindByName(paramTextBox.Text);
                     if (taskFinder.Tasks != null)
                     {
                         foreach (var task in taskFinder.Tasks)
                         {
-                            ListViewItem taskItem = new ListViewItem();
-                            taskItem.SubItems.Add(task.Id.ToString());
+                            ListViewItem taskItem = taskListView.Items.Add(task.Id.ToString());
                             taskItem.SubItems.Add(task.Name);
                             taskItem.SubItems.Add(task.DateOfCreating.ToString());
                             taskItem.SubItems.Add(task.DeadLine.ToString());
                             taskItem.SubItems.Add(task.Priority.ToString());
-                            taskListView.Items.Add(taskItem);
                         }
                         taskListView.Refresh();
                     }
                 }
                 if (creationDateRadioButton.Checked)
                 {
-                    taskListView.Clear();
+                    taskListView.Items.Clear();
                     DateTime date;
                     bool result = DateTime.TryParse(paramTextBox.Text, out date);
                     if (result)
@@ -129,13 +133,11 @@ namespace TaskManager.UI
                         {
                             foreach (var task in taskFinder.Tasks)
                             {
-                                ListViewItem taskItem = new ListViewItem();
-                                taskItem.SubItems.Add(task.Id.ToString());
+                                ListViewItem taskItem = taskListView.Items.Add(task.Id.ToString());
                                 taskItem.SubItems.Add(task.Name);
                                 taskItem.SubItems.Add(task.DateOfCreating.ToString());
                                 taskItem.SubItems.Add(task.DeadLine.ToString());
                                 taskItem.SubItems.Add(task.Priority.ToString());
-                                taskListView.Items.Add(taskItem);
                             }
                             taskListView.Refresh();
                         }
@@ -143,7 +145,7 @@ namespace TaskManager.UI
                 }
                 if (deadlineRadioButton.Checked)
                 {
-                    taskListView.Clear();
+                    taskListView.Items.Clear();
                     DateTime date;
                     bool result = DateTime.TryParse(paramTextBox.Text, out date);
                     if (result)
@@ -153,13 +155,11 @@ namespace TaskManager.UI
                         {
                             foreach (var task in taskFinder.Tasks)
                             {
-                                ListViewItem taskItem = new ListViewItem();
-                                taskItem.SubItems.Add(task.Id.ToString());
+                                ListViewItem taskItem = taskListView.Items.Add(task.Id.ToString());
                                 taskItem.SubItems.Add(task.Name);
                                 taskItem.SubItems.Add(task.DateOfCreating.ToString());
                                 taskItem.SubItems.Add(task.DeadLine.ToString());
                                 taskItem.SubItems.Add(task.Priority.ToString());
-                                taskListView.Items.Add(taskItem);
                             }
                             taskListView.Refresh();
                         }
@@ -167,7 +167,7 @@ namespace TaskManager.UI
                 }
                 if (priorityRadioButton.Checked)
                 {
-                    taskListView.Clear();
+                    taskListView.Items.Clear();
                     int priority;
                     bool result = Int32.TryParse(paramTextBox.Text, out priority);
                     if (result)
@@ -177,13 +177,11 @@ namespace TaskManager.UI
                         {
                             foreach (var task in taskFinder.Tasks)
                             {
-                                ListViewItem taskItem = new ListViewItem();
-                                taskItem.SubItems.Add(task.Id.ToString());
+                                ListViewItem taskItem = taskListView.Items.Add(task.Id.ToString());
                                 taskItem.SubItems.Add(task.Name);
                                 taskItem.SubItems.Add(task.DateOfCreating.ToString());
                                 taskItem.SubItems.Add(task.DeadLine.ToString());
                                 taskItem.SubItems.Add(task.Priority.ToString());
-                                taskListView.Items.Add(taskItem);
                             }
                             taskListView.Refresh();
                         }
@@ -191,7 +189,7 @@ namespace TaskManager.UI
                 }
                 if (tagRadioButton.Checked)
                 {
-                    taskListView.Clear();
+                    taskListView.Items.Clear();
                     if (paramTextBox.Text!=null)
                     {
                         taskFinder.FindByTag(
@@ -200,13 +198,11 @@ namespace TaskManager.UI
                         {
                             foreach (var task in taskFinder.Tasks)
                             {
-                                ListViewItem taskItem = new ListViewItem();
-                                taskItem.SubItems.Add(task.Id.ToString());
+                                ListViewItem taskItem = taskListView.Items.Add(task.Id.ToString());
                                 taskItem.SubItems.Add(task.Name);
                                 taskItem.SubItems.Add(task.DateOfCreating.ToString());
                                 taskItem.SubItems.Add(task.DeadLine.ToString());
                                 taskItem.SubItems.Add(task.Priority.ToString());
-                                taskListView.Items.Add(taskItem);
                             }
                             taskListView.Refresh();
                         }
@@ -217,7 +213,13 @@ namespace TaskManager.UI
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-
+            DAL.Task taskToDelete = taskFinder.FindById((int)delNumericUpDown.Value);
+            if (taskToDelete != null)
+            {
+                taskFinder.Repository.Delete(taskToDelete);
+                MessageBox.Show("Task was successfully deleted");
+            }
+            else MessageBox.Show("Entered incorrect Id number");
         }
     }
 }

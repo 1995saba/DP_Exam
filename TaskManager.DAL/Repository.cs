@@ -15,8 +15,8 @@ namespace TaskManager.DAL
         public Repository()
         {
             dbContext = new ApplicationDbContext();
-            Tasks = new List<Task>();
-            Tags = new List<Tag>();
+            Tasks = dbContext.Tasks.ToList();
+            Tags = dbContext.Tags.ToList();
         }
 
         public void Create(Task item)

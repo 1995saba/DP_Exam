@@ -51,7 +51,10 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.showAllButton = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.delNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.priorityNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // addTaskButton
@@ -149,7 +152,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(566, 479);
+            this.saveButton.Location = new System.Drawing.Point(276, 479);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 15;
@@ -159,7 +162,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(718, 479);
+            this.deleteButton.Location = new System.Drawing.Point(934, 479);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 16;
@@ -257,11 +260,29 @@
             this.showAllButton.UseVisualStyleBackColor = true;
             this.showAllButton.Click += new System.EventHandler(this.ShowAllButton_Click);
             // 
+            // delNumericUpDown
+            // 
+            this.delNumericUpDown.Location = new System.Drawing.Point(794, 482);
+            this.delNumericUpDown.Name = "delNumericUpDown";
+            this.delNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.delNumericUpDown.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(653, 484);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Enter TaskId to delete";
+            // 
             // TaskManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 563);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.delNumericUpDown);
             this.Controls.Add(this.showAllButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.priorityRadioButton);
@@ -287,6 +308,7 @@
             this.Name = "TaskManager";
             this.Text = "Task Manager";
             ((System.ComponentModel.ISupportInitialize)(this.priorityNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,6 +339,8 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button showAllButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.NumericUpDown delNumericUpDown;
+        private System.Windows.Forms.Label label5;
     }
 }
 

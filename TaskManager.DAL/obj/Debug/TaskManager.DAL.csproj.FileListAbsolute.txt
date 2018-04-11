@@ -9,3 +9,14 @@ c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\ob
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\obj\Debug\TaskManager.DAL.csproj.CoreCompileInputs.cache
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\obj\Debug\TaskManager.DAL.dll
 c:\users\hp\documents\visual studio 2017\Projects\TaskManager\TaskManager.DAL\obj\Debug\TaskManager.DAL.pdb
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\bin\Debug\TaskManager.DAL.dll.config
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\bin\Debug\TaskManager.DAL.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\bin\Debug\TaskManager.DAL.pdb
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\bin\Debug\EntityFramework.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\bin\Debug\EntityFramework.xml
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\obj\Debug\TaskManager.DAL.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\obj\Debug\TaskManager.DAL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\obj\Debug\TaskManager.DAL.dll
+C:\Users\HP\Documents\GitHub\DP_Exam\TaskManager.DAL\obj\Debug\TaskManager.DAL.pdb
